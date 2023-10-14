@@ -33,18 +33,6 @@ public class Huffman {
         }
     }
 
-    public void imprimirCodigo(No no, String s) {
-        if (no.esquerda == null && no.direita == null && ehLetra(no.caractere)) {
-            System.out.println(no.caractere + ":" + s);
-            return;
-        }
-        imprimirCodigo(no.esquerda, s + "0");
-        imprimirCodigo(no.direita, s + "1");
-    }
-
-    private boolean ehLetra(char ch) {
-        return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
-    }
 
     private class No {
         char caractere;
@@ -119,14 +107,15 @@ public class Huffman {
         No noAtual = raiz;
 
         for (int i = 0; i < bitsComprimidos.length(); i++) {
-            char bit = bitsComprimidos.charAt(i);
+            char c = bitsComprimidos.charAt(i);
 
-            if (bit == '0') {
+            if (c == '0') {
                 noAtual = noAtual.esquerda;
-            } else if (bit == '1') {
+            } else if (c == '1') {
                 noAtual = noAtual.direita;
             }
 
+            assert noAtual != null;
             if (noAtual.esquerda == null && noAtual.direita == null) {
                 textoDescomprimido.append(noAtual.caractere);
                 noAtual = raiz;

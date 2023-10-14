@@ -1,11 +1,7 @@
 package entidade;
 
-import aplicacao.Huffman;
 import aplicacao.Protocolo;
-
 import javax.swing.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 public class Cliente {
     static Protocolo protocolo = new Protocolo();
@@ -55,7 +51,7 @@ public class Cliente {
                             Veiculo veiculo = new Veiculo(renavam, placa, nomeCondutor, cpfCondutor, modelo, ano);
                             protocolo.inserirVeiculo(veiculo);
 
-                            JOptionPane.showMessageDialog(null, "Veículo inserido com sucesso:\n" + veiculo.toString());
+                            JOptionPane.showMessageDialog(null, "Veículo inserido com sucesso:\n" + veiculo.toString2());
 
                         } catch (IllegalArgumentException e) {
                             JOptionPane.showMessageDialog(null, "Erro ao inserir veículo: " + e.getMessage());
@@ -107,7 +103,7 @@ public class Cliente {
                                     JOptionPane.showMessageDialog(null, "Opção de alteração inválida.");
                             }
                             protocolo.atualizarVeiculo(veiculoParaAlterar);
-                            JOptionPane.showMessageDialog(null, "Veículo alterado com sucesso:\n" + veiculoParaAlterar.toString());
+                            JOptionPane.showMessageDialog(null, "Veículo alterado com sucesso:\n" + veiculoParaAlterar.toString2());
                         } else {
                             JOptionPane.showMessageDialog(null, "Veículo não encontrado.");
                         }
@@ -166,15 +162,15 @@ public class Cliente {
 
     public static void inserir50Veiculos() {
         try {
-            protocolo.inserirVeiculo(new Veiculo("123456789", "ABC1D23", "Ícaro", "12345678922", "KWID", 2021));
-            protocolo.inserirVeiculo(new Veiculo("111111112", "AAA1A12", "Paulo Henrique", "12345678901", "Ferrari", 2022));
+            protocolo.inserirVeiculo(new Veiculo("123456789", "QWE8R90", "Beatriz", "89012345678", "Crossover", 2020));
+            protocolo.inserirVeiculo(new Veiculo("111111112", "ABC1D23", "Ícaro", "12345678922", "KWID", 2021));
             protocolo.inserirVeiculo(new Veiculo("111111113", "AAA1A13", "Maria", "23456789012", "Hatch", 2021));
             protocolo.inserirVeiculo(new Veiculo("111111114", "AAA1A14", "Pedro", "34567890123", "SUV", 2020));
             protocolo.inserirVeiculo(new Veiculo("999999999", "AAA1A19", "Ana", "45678901234", "Crossover", 2019));
             protocolo.inserirVeiculo(new Veiculo("617295837", "POI5Q67", "Carlos", "56789012345", "Sedan", 2018));
             protocolo.inserirVeiculo(new Veiculo("840562973", "ZXC6V78", "Mariana", "67890123456", "Hatch", 2022));
             protocolo.inserirVeiculo(new Veiculo("475916238", "ASD7F89", "Lucas", "78901234567", "SUV", 2021));
-            protocolo.inserirVeiculo(new Veiculo("216837594", "QWE8R90", "Beatriz", "89012345678", "Crossover", 2020));
+            protocolo.inserirVeiculo(new Veiculo("216837594", "AAA1A12", "Paulo Henrique", "12345678901", "Ferrari", 2022));
             protocolo.inserirVeiculo(new Veiculo("358614729", "TYU9I01", "Gustavo", "90123456789", "Sedan", 2019));
             protocolo.inserirVeiculo(new Veiculo("182795346", "PLK1A12", "Fernanda", "23456789090", "Hatch", 2023));
             protocolo.inserirVeiculo(new Veiculo("695148237", "FGH2J23", "Thiago", "34567890101", "SUV", 2022));

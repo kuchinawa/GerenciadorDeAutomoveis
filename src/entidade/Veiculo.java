@@ -71,12 +71,11 @@ public class Veiculo {
         return placa + "#" + renavam + "#" + condutor.getNome() + "#" + condutor.getCpf() + "#" + modelo + "#" + ano;
     }
     public String toString2() {
-        return "Veiculo{" +
-                "placa='" + placa + '\'' +
-                ", renavam='" + renavam + '\'' +
+        return "Veiculo: " +
+                "placa= '" + placa + '\'' +
+                ", renavam= '" + renavam + '\'' +
                 condutor +
-                ", modelo='" + modelo + '\'' +
-                ", ano=" + ano +
-                '}';
+                ", modelo= '" + modelo + '\'' +
+                ", ano= " + ano;
     }
 }

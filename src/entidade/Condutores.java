@@ -28,6 +28,6 @@ public class Condutores {
 
     @Override
     public String toString() {
-        return "Condutor: [nome=" + nome + ", cpf=" + cpf + "]";
+        return " Nome do condutor: " + nome + ", cpf do condutor: " + cpf + "]";
     }
 }
