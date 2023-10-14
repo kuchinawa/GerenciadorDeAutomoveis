@@ -88,22 +88,25 @@ public class TabelaHash{
 
         while (atual != null) {
             if (atual.getChave().equals(renavam)) {
+                String mensagem = "Veículo removido com sucesso - Renavam: " + renavam + ", Placa: " + atual.getValor().getPlaca() +
+                        ", Condutor: " + atual.getValor().getCondutor().getNome();
+
                 if (anterior == null) {
                     tabela[hash] = atual.getProximo();
                 } else {
                     anterior.setProximo(atual.getProximo());
                 }
 
-                registrarLog("Remoção - Renavam: " + renavam + ", Índice: " + hash + ", Fator de Carga: " + fatorDeCarga());
-                return "Veículo removido com sucesso.";
+                registrarLog("Remoção - " + mensagem + ", Índice: " + hash + ", Fator de Carga: " + fatorDeCarga());
+                return mensagem;
             }
+
             anterior = atual;
             atual = atual.getProximo();
         }
 
         return "Veículo não encontrado.";
     }
-
     public int contarVeiculos() {
         int total = 0;
 
